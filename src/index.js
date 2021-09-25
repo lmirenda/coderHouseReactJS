@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
+const App = () => {
+  const name = "CODER"
+  console.log("componente titulo");
+  return(
+    <h1> {name} HOUSE - CLASE 1</h1>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
