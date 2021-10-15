@@ -1,30 +1,34 @@
 export const stock = [
     {
     id: 1,
-    title: "Producto 1",
-    description: "Desc1",
+    title: "Dell",
+    description: "Notebook Dell",
     price: 400,
-    pictureUrl: "https://via.placeholder.com/220"
+    pictureUrl: "https://i.imgur.com/6GLMCGR.png",
+    category: "PC"
     },
     {
     id: 2,
-    title: "Producto 2",
-    description: "Desc2",
+    title: "Razer",
+    description: "Razer Blade",
     price: 200,
-    pictureUrl: "https://via.placeholder.com/220"
+    pictureUrl: "https://i.imgur.com/h9oTUjd.png",
+    category: "PC"
     },
     {
     id: 3,
-    title: "Producto 3",
-    description: "Desc3",
+    title: "MacBook",
+    description: "MacBook Pro",
     price: 300,
-    pictureUrl: "https://via.placeholder.com/220"
+    pictureUrl: "https://i.imgur.com/dkcYzgU.png",
+    category: "Mac"
     },
     {
     id: 4,
-    title: "Producto 4",
-    description: "Desc4",
+    title: "Mac Mini",
+    description: "Mac Mini",
     price: 400,
-    pictureUrl: "https://via.placeholder.com/220"
+    pictureUrl: "https://i.imgur.com/MLdWyeh.png",
+    category: "Mac"
     },
 ]

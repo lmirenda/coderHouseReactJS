@@ -1,7 +1,11 @@
 import React from 'react'
 import './NavBar.css'
 import { Cart } from './Cart'
+import { NavLink } from 'react-router-dom'
 //import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
+
+
+
 
 
 const brandName = "TiendaTecno"
@@ -12,11 +16,12 @@ export const NavBar = () => {
             <h1>{ brandName }</h1>
 
             <nav>
-                <a href="#">Producto </a>
-                <a href="#">Ofertas </a>
-                <a href="#">Carrito</a>
+                <NavLink activeClassName="activeLink" exact to="/">Inicio</NavLink>
+                <NavLink activeClassName="activeLink" to="/productos/PC">PC</NavLink>
+                <NavLink activeClassName="activeLink" to="/productos/Mac">Mac</NavLink>
+                <NavLink activeClassName="activeLink" to="/contacto">Contacto</NavLink>
+                <NavLink activeClassName="activeLink" to="/cart"><Cart/></NavLink>
             </nav>
-            <Cart/>
         </header>
     )
 }
