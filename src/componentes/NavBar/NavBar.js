@@ -2,7 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import { Cart } from './Cart'
 import { NavLink } from 'react-router-dom'
-//import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
+import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
 
 
 
@@ -15,7 +15,7 @@ export const NavBar = () => {
         <header className="NVheader">
             <h1>{ brandName }</h1>
 
-            <nav>
+            <nav className="navbar navbar-dark bg-dark">
                 <NavLink activeClassName="activeLink" exact to="/">Inicio</NavLink>
                 <NavLink activeClassName="activeLink" to="/productos/PC">PC</NavLink>
                 <NavLink activeClassName="activeLink" to="/productos/Mac">Mac</NavLink>
