@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
+import { BsChatSquareQuote } from "react-icons/bs";
 import { useParams } from "react-router";
-import { CartContext } from "../../context/CartContext";
+// import { CartContext } from "../../context/CartContext";
 import { UIContext } from "../../context/UIContext";
-import { pedirProductos } from '../../helpers/pedirProductos'
+import { getFirestore } from "../../firebase/config";
+// import { pedirProductos } from '../../helpers/pedirProductos'
 import { Loader } from "../Loader/Loader";
 import { ItemList } from "./ItemList";
 
@@ -16,22 +18,21 @@ export const ItemListContainer = () => {
     const {categoryId} = useParams()
 
     useEffect(()=>{
-        setLoading(true)
 
-        pedirProductos()
-            .then((res) => {
+        const db = getFirestore()
+        const itemCollection = categoryId 
+                                ? db.collection('productos').where('category','==',categoryId)
+                                : db.collection('productos')
 
-                if (categoryId) {
-                    setItems(res.filter(prod => prod.category === categoryId))
-                } else {
-                    setItems( res )
-                }
-
-            })
-            .catch((err) => console.log(err))
-            .finally(()=> {
-                setLoading(false)
-            })
+            itemCollection.get()
+                .then((response)=> {
+                    const newItems = response.docs.map((doc)=>{
+                        return {id: doc.id, ...doc.data()}
+                    })
+                    setItems(newItems)
+                })
+                .catch(err => console.log(err))
+                .finally(()=> {setLoading(false)})        
     },[categoryId])
 
     return (
