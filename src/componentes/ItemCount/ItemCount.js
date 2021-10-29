@@ -18,14 +18,16 @@ export const ItemCount = ( {cantidad, modifyCantidad, maxStock} ) => {
     return (
         <div>
             <button
-                className="btn btn-primary mx-3"
+                className={`btn ${cantidad == 0 ? "btn-danger" : "btn-primary"}`}
+                disabled={cantidad == 0}
                 onClick={handleRestar}
             >
                 -
             </button>
             <span className="mx-3">{cantidad}</span>
             <button
-                className="btn btn-primary mx-3"
+                className={`btn ${cantidad == maxStock ? "btn-danger" : "btn-primary"}`}
+                disabled={cantidad == maxStock}
                 onClick={handleSumar}
             >
                 +

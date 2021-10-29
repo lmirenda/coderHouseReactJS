@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { CartContext } from "../../context/CartContext";
 import { UIContext } from "../../context/UIContext";
 import { pedirProductos } from '../../helpers/pedirProductos'
+import { Loader } from "../Loader/Loader";
 import { ItemList } from "./ItemList";
 
 
@@ -36,7 +37,7 @@ export const ItemListContainer = () => {
     return (
         <section className="container my-5">
             {loading
-                ? <h2>Cargando...</h2>
+                ? <Loader/>
                 :<ItemList productos={items}/>
             }
         </section>

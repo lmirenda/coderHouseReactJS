@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.css'
-import { Cart } from './Cart'
+import { CartWidget } from './CartWidget'
 import { NavLink } from 'react-router-dom'
 import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
 
@@ -20,7 +20,7 @@ export const NavBar = () => {
                 <NavLink activeClassName="activeLink" to="/productos/PC">PC</NavLink>
                 <NavLink activeClassName="activeLink" to="/productos/Mac">Mac</NavLink>
                 <NavLink activeClassName="activeLink" to="/contacto">Contacto</NavLink>
-                <NavLink activeClassName="activeLink" to="/cart"><Cart/></NavLink>
+                <NavLink activeClassName="activeLink" to="/cart"><CartWidget/></NavLink>
             </nav>
         </header>
     )

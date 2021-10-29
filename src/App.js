@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom'
 import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
-import { CartScreen } from './componentes/CartScreen/CartScreen';
+import { Cart } from './componentes/CartScreen/Cart';
 import { UIProvider } from './context/UIContext';
 
 
@@ -40,7 +40,7 @@ function App() {
                 </Route>
 
                 <Route exact path="/cart">
-                  <CartScreen/>
+                  <Cart/>
                 </Route>
 
                 <Route path="*">
