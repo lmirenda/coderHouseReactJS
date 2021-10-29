@@ -12,17 +12,34 @@ const brandName = "TiendaTecno"
 
 export const NavBar = () => {
     return (
-        <header className="NVheader">
-            <h1>{ brandName }</h1>
+        <>
+        <Navbar bg="dark" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home"> <NavLink activeClassName="activeLink" exact to="/">{brandName}</NavLink></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <NavDropdown title="Productos" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/productos/PC"><NavLink activeClassName="activeLink" to="/productos/PC">PC</NavLink></NavDropdown.Item>
+                    <NavDropdown.Item href="/productos/Mac"><NavLink activeClassName="activeLink" to="/productos/Mac">Mac</NavLink></NavDropdown.Item>
+                    </NavDropdown>
+                    <Nav.Link href="#link"><NavLink activeClassName="activeLink" to="/contacto">Contacto</NavLink></Nav.Link>
+                    <Nav.Link href="#link"><NavLink activeClassName="activeLink" to="/cart"><CartWidget/></NavLink></Nav.Link>
+                </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+            {/* <h1>{ brandName }</h1> */}
 
-            <nav className="navbar navbar-dark bg-dark">
+            {/* <nav className="navbar navbar-dark bg-dark">
                 <NavLink activeClassName="activeLink" exact to="/">Inicio</NavLink>
                 <NavLink activeClassName="activeLink" to="/productos/PC">PC</NavLink>
                 <NavLink activeClassName="activeLink" to="/productos/Mac">Mac</NavLink>
                 <NavLink activeClassName="activeLink" to="/contacto">Contacto</NavLink>
                 <NavLink activeClassName="activeLink" to="/cart"><CartWidget/></NavLink>
-            </nav>
-        </header>
+            </nav> */}
+        </>
+        
     )
 }
 
