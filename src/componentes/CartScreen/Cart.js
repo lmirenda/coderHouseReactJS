@@ -48,6 +48,10 @@ export const Cart = () => {
                         >
                             Vaciar Carrito
                         </button>
+
+                        <Link to="/checkout" className="btn btn-success">
+                            Terminar compra
+                        </Link>
                     </>
             }
 

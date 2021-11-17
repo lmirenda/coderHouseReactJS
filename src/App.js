@@ -11,6 +11,7 @@ import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetai
 import { CartProvider } from './context/CartContext';
 import { Cart } from './componentes/CartScreen/Cart';
 import { UIProvider } from './context/UIContext';
+import { Checkout } from './componentes/Checkout/Checkout';
 
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
 
                 <Route exact path="/cart">
                   <Cart/>
+                </Route>
+
+                <Route exact path="/checkout">
+                  <Checkout/>
                 </Route>
 
                 <Route path="*">
