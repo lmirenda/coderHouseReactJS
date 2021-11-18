@@ -31,7 +31,35 @@ export const Checkout = () => {
         e.preventDefault()
         
         if (values.nombre.length < 3){
-            alert("Nombre invalido")
+            Swal.fire({
+                icon:'error',
+                title: 'Error de formulario',
+                text: 'Debes completar el campo de nombre'
+            })
+            return
+        }
+        if (values.apellido.length < 3){
+            Swal.fire({
+                icon:'error',
+                title: 'Error de formulario',
+                text: 'Debes completar el campo de apellido'
+            })
+            return
+        }
+        if (values.email.length < 3){
+            Swal.fire({
+                icon:'error',
+                title: 'Error de formulario',
+                text: 'Debes completar el campo de email'
+            })
+            return
+        }
+        if (values.tel.length < 3){
+            Swal.fire({
+                icon:'error',
+                title: 'Error de formulario',
+                text: 'Debes completar el campo de telefono'
+            })
             return
         }
 
