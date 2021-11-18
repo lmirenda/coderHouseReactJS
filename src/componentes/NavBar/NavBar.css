@@ -12,11 +12,15 @@
 }
 
 a {
-    color: white;
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
 }
 
 .cartWidget{
     text-decoration: none;
     color: white !important;
+}
+
+.dropdown-menu {
+    background-color: #212529 !important;
 }
