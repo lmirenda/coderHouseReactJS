@@ -15,3 +15,8 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.cartWidget{
+    text-decoration: none;
+    color: white !important;
+}

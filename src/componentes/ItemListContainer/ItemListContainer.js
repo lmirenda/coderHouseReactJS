@@ -18,7 +18,7 @@ export const ItemListContainer = () => {
     const {categoryId} = useParams()
 
     useEffect(()=>{
-
+        setLoading(true)
         const db = getFirestore()
         const itemCollection = categoryId 
                                 ? db.collection('productos').where('category','==',categoryId)
